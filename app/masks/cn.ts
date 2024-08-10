@@ -1,5 +1,5 @@
 import { BuiltinMask } from "./typing";
-import { DEFAULT_MODEL } from "../constant";
+let DEFAULT_MODEL = process.env.DEFAULT_MODEL ?? "llama3.1";
 export const CN_MASKS: BuiltinMask[] = [
   {
     avatar: "1f5bc-fe0f",
