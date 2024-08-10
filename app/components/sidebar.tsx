@@ -16,7 +16,7 @@ import DiscoveryIcon from "../icons/discovery.svg";
 import Locale from "../locales";
 
 import { useAppConfig, useChatStore } from "../store";
-
+import { APP_NAME, APP_TITLE } from "../constant";
 import {
   DEFAULT_SIDEBAR_WIDTH,
   MAX_SIDEBAR_WIDTH,
@@ -225,8 +225,8 @@ export function SideBar(props: { className?: string }) {
       {...props}
     >
       <SideBarHeader
-        title="NextChat"
-        subTitle="Build your own AI assistant."
+        title={APP_NAME}
+        subTitle={APP_TITLE}
         logo={<ChatGptIcon />}
       >
         <div className={styles["sidebar-header-bar"]}>

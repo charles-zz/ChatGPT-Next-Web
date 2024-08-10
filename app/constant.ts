@@ -1,5 +1,8 @@
 export const OWNER = "ChatGPTNextWeb";
 export const REPO = "ChatGPT-Next-Web";
+export const APP_NAME = `FangWen Chat`;
+export const APP_TITLE = `Build your own AI assistant.`;
+
 export const REPO_URL = `https://github.com/${OWNER}/${REPO}`;
 export const ISSUE_URL = `https://github.com/${OWNER}/${REPO}/issues`;
 export const UPDATE_URL = `${REPO_URL}#keep-updated`;
