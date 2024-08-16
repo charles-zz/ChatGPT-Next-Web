@@ -278,7 +278,11 @@ export const KnowledgeCutOffDate: Record<string, string> = {
 //   "gpt-4-1106-preview",
 //   "dall-e-3",
 // ];
-const openaiModels = process.env.OPENAI_MODELS ?? ["gpt-3.5-turbo", "gpt-4"];
+
+let openaiModels = ["gpt-3.5-turbo", "gpt-4"];
+if (process.env.CUSTOM_MODELS) {
+  openaiModels = process.env.CUSTOM_MODELS.split(",");
+}
 
 const googleModels = [
   "gemini-1.0-pro",
