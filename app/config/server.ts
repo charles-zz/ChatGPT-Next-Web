@@ -1,5 +1,5 @@
 import md5 from "spark-md5";
-import { DEFAULT_MODELS } from "../constant";
+import { DEFAULT_MODEL, DEFAULT_MODELS } from "../constant";
 
 declare global {
   namespace NodeJS {
@@ -115,7 +115,7 @@ export const getServerSideConfig = () => {
 
   const disableGPT4 = !!process.env.DISABLE_GPT4;
   let customModels = process.env.CUSTOM_MODELS ?? "";
-  let defaultModel = process.env.DEFAULT_MODEL ?? "";
+  let defaultModel = DEFAULT_MODEL;
 
   if (disableGPT4) {
     if (customModels) customModels += ",";

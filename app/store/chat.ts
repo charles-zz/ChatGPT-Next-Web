@@ -27,7 +27,7 @@ import { createPersistStore } from "../utils/store";
 import { collectModelsWithDefaultModel } from "../utils/model";
 import { useAccessStore } from "./access";
 import { isDalle3 } from "../utils";
-
+import { DEFAULT_CONFIG } from "./config";
 export type ChatMessage = RequestMessage & {
   date: string;
   streaming?: boolean;
@@ -232,7 +232,6 @@ export const useChatStore = createPersistStore(
           };
           session.topic = mask.name;
         }
-
         set((state) => ({
           currentSessionIndex: 0,
           sessions: [session].concat(state.sessions),
